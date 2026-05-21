@@ -14,8 +14,8 @@ PATH = "data/raw/vehicles.csv"
 URL = "https://api.cepik.gov.pl/pojazdy"
 params_vehicles = {
     'wojewodztwo': '24',
-    'data-od': '20260202',
-    'data-do': '20260203',
+    'data-od': '19250101',
+    'data-do': '19260101',
     'pokaz-wszystkie-pola': 'false'
 }
 
@@ -46,4 +46,5 @@ def save_to_csv(data, path):
 
 
 if __name__ == "__main__":
-    save_to_csv(vehicles_endpoint_fetch(URL, params_vehicles), PATH)
+    cars = vehicles_endpoint_fetch(URL, params_vehicles)
+    print(cars)
