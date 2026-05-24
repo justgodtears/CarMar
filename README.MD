@@ -1,8 +1,8 @@
-# POLCAR #
+# CARMAR #
 *Full analysis of vehicle registration in Poland, based on data from CEPIK API.*
 
 
-![CONSTRUCTION](assets/construction2.gif)   ![Construction2](assets/construction.gif)
+![CONSTRUCTION](gifs/construction2.gif)   ![Construction2](gifs/construction.gif)
 
 
 ### Project in progress....
