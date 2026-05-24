@@ -10,7 +10,7 @@ from httpx import HTTPError
 ssl_context = ssl.create_default_context()
 ssl_context.set_ciphers('DEFAULT:@SECLEVEL=1')
 
-PATH = "data/raw/vehicles.csv"
+PATH = "data/test_data/vehicles.csv"
 URL = "https://api.cepik.gov.pl/pojazdy"
 params_vehicles = {
     'wojewodztwo': '24',
