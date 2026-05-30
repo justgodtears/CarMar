@@ -1,6 +1,6 @@
 ### TODO
 1. Database with all voivodeships as batch data with historical information.
-2. Automatic daily API fetching to keep the database up to date.
+2. ~~Automatic daily API fetching to keep the database up to date.~~
 3. Frontend for statistical analytics built with Reflex.
 4. Daily stats of newly registered cars from previous days.
 5. Incremental data loading — fetch only new registrations (delta), not a full reload every day.
