@@ -16,7 +16,17 @@ URL = "https://api.cepik.gov.pl/pliki"
 
 
 
-def batch_data_links(url, params=None):
+def batch_data_links(url: str, params=None):
+    """
+    Function fetches all links to downloadable data files.
+    Args:
+        url: URL of batch data endpoint.
+        params: Can be none, parameters of query.
+
+    Returns:
+        List of links to downloadable data files.
+
+    """
     links_list = []
     with httpx.Client(verify=ssl_context) as client:
         r = client.get(url, params=params)
@@ -36,6 +46,17 @@ def batch_data_links(url, params=None):
 
 
 def download_batch_files(data_link: list, metadata_link: list, path_dir):
+    """
+    Function downloads batch files from list of links
+    Args:
+        data_link: List of links to download.
+        metadata_link: List of links to download metadata.
+        path_dir: Directory to save batch files.
+
+    Returns:
+        CSV Files saved in directory from parameter.
+
+    """
     save_dir = Path(path_dir)
     save_dir.mkdir(exist_ok=True)
 
@@ -45,7 +66,7 @@ def download_batch_files(data_link: list, metadata_link: list, path_dir):
         filename = link.split("/")[-1]
         filepath = save_dir / filename
 
-        with httpx.stream("GET", link) as response:
+        with httpx.stream("GET", link, verify=ssl_context) as response:
             response.raise_for_status()
             with open(filepath, "wb") as f:
                 for chunk in response.iter_bytes(chunk_size=8192):
@@ -58,6 +79,7 @@ def download_batch_files(data_link: list, metadata_link: list, path_dir):
             print(f"Unpacked: {filename}")
         else:
             print(f"Saved: {filepath}")
+
+
 if __name__ == "__main__":
-    data, meta = batch_data_links(URL)
-    download_batch_files(data, meta, PATH)
+    print("")

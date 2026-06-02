@@ -1,5 +1,5 @@
 ### TODO
-1. Database with all voivodeships as batch data with historical information.
+1. Database with all voivodeships as batch data with historical information. Date range is 01.01.2000 - 20.05.2026.
 2. ~~Automatic daily API fetching to keep the database up to date.~~
 3. Frontend for statistical analytics built with Reflex.
 4. Daily stats of newly registered cars from previous days.
