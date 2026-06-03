@@ -1,0 +1,9 @@
+[theme]
+base = "light"
+backgroundColor = "#EDE8D0"
+secondaryBackgroundColor = "#C9C5B1"
+textColor = "#000000"
+primaryColor = "#4F4D46"
+
+[ui]
+themeMode = "light"
