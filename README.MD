@@ -2,7 +2,7 @@
 
 A comprehensive analytical dashboard and data processing pipeline for vehicle registration data in Poland. DCM processes, cleans, and visualizes over two decades of passenger car registrations based on the Central Register of Vehicles and Drivers (CEPiK) data.
 
-> **Status:** Project in progress.
+> **Status:** Project finished.
 
 ## Overview
 
